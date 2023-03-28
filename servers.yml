@@ -68,7 +68,7 @@ Resources:
           aws s3 cp s3://udacity-demo-1/udacity.zip .
           unzip -q -o udacity.zip && extracted_folder=$(unzip -q -l udacity.zip | head -n 4 | tail -n 1 | awk '{print $4}')
           rm -f index.html
-          mv -f "${extracted_folder}"/* .
+          mv -f "$extracted_folder"/* .
       ImageId: ami-00b3e95ade0a05b9b
       SecurityGroups:
       - Ref: WebServerSecGroup
